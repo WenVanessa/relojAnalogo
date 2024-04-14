@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Para centrar verticalmente los elementos */
+    min-height: 100vh;
+    background-color: #ffb6af;
+}
+
+.titulo{
+    margin-top: 35px;
+    text-align: center; 
+    font-size: 60px; 
+    margin-bottom: 20px;   
+    font-family: "Dancing Script", cursive;
+    font-weight: 350;
+    font-style: normal;
+    color: black;
+}
+
+.reloj {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/relojAnalogo2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1rem solid #fcfcda;
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 20px 5px #f5f5c5;
+}
+
+.reloj::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #f5f5ae;
+    border-radius: 50vh;
+    z-index: 10000;
+}
+
+
+.hora{
+    width: 140px;
+    height: 140px;
+}
+
+.hora::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: black;
+    z-index: 10;
+    border-radius: 50vh;
+
+}
+
+.minuto{
+    width: 220px;
+    height: 220px; 
+}
+
+.minuto::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background: gray;
+    z-index: 11;
+    border-radius: 50vh;
+}
+
+.segundo{
+    width: 250px;
+    height: 250px; 
+}
+
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background: beige;
+    z-index: 12;
+    border-radius: 50vh;
+}
+
+.hora, .minuto, .segundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
+
+.horaDigital {
+    margin-top: auto; /* Mueve el cuadrado hacia la parte inferior */
+    width: 25%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 40px;
+    -webkit-box-shadow: 0px 0px 86px 0px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 0px 86px 0px rgba(0,0,0,0.9);
+    box-shadow: 0px 0px 86px 0px rgba(0, 0, 0, 0.9);
+}
